@@ -16,6 +16,7 @@ export class ListingDataFormComponent implements OnInit {
   name: string = '';
   description: string = '';
   price: number = 0;
+  views: number= 0
 
   @Output() onSubmit = new EventEmitter<Listing>();
 
@@ -33,6 +34,7 @@ export class ListingDataFormComponent implements OnInit {
       name: this.name,
       description: this.description,
       price: this.price,
+      views: this.views
     });
   }
 }
