@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Listing } from '../types';
 import { ListingsService } from "../listings.service"
 
+
 @Component({
   selector: 'app-listing-page',
   templateUrl: './listing-page.component.html',
