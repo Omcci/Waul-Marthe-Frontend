@@ -4,10 +4,12 @@
     <div id="content-wrap">
       <router-outlet></router-outlet>
     </div>
-    <button (click)="signOutClicked()"> Sign Out </button>
+    <div class="signout-container">
+      <button (click)="signOutClicked()">Sign Out</button>
+    </div>
   </div>
   <div id="max-width-column" *ngIf="!(auth.user | async)">
-    <h1> You need to sign in first</h1>
-    <button (click)="signInClicked()"> Sign in with Google auth</button>
+    <h1>You need to sign in first</h1>
+    <button (click)="signInClicked()">Sign in with Google auth</button>
   </div>
 </div>

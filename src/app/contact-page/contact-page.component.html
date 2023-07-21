@@ -1,22 +1,27 @@
 <div>
   <div class="content-box">
-    <h3>Send the owner a message :</h3>
-    <div>
-      <label>
-        Your email address :
-        <input name="email" [(ngModel)]="email" />
-      </label>
-    </div>
-    <div>
-      <label>
-        Your message :
-        <textarea name="message" cols="20" rows="5" [(ngModel)]="message">
-        </textarea>
-      </label>
-    </div>
-    <button (click)="sendMessage()">Send</button>
+    <div class="input-wrapper"> <h3>Send the owner a message :</h3>
+      <div >
+        <label class="input-container">
+          Your email address :
+          <input name="email" [(ngModel)]="email" />
+        </label>
+      </div>
+      <div >
+        <label class="input-container">
+          Your message :
+          <textarea name="message" cols="20" rows="5" [(ngModel)]="message">
+          </textarea>
+        </label>
+      </div>
+      <div class="buttons-container">
+        <button (click)="sendMessage()">Send</button>
+      </div></div>
+   
   </div>
-  <a *ngIf="listing" [routerLink]="['/listings', listing.id]">
-    <button>Back to Listing</button>
-  </a>
+  <div class="back-buttons">
+    <a *ngIf="listing" [routerLink]="['/listings', listing.id]">
+      <button>Back to Listing</button>
+    </a>
+  </div>
 </div>
