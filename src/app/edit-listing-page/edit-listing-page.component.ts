@@ -14,15 +14,12 @@ export class EditListingPageComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private listingsService : ListingsService) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id') as string;
+    const id = this.route.snapshot.paramMap.get('id') as string
     this.listingsService.getListingById(id).subscribe(listing => this.listing = listing)
   }
 
   onSubmit(listingData: Listing): void {
     if (this.listing) {
-      // this.listing.name = updatedListing.name;
-      // this.listing.description = updatedListing.description;
-      // this.listing.price = updatedListing.price;
       this.listingsService.editListing(this.listing?.id, listingData.name, listingData.description, listingData.price).subscribe(() => this.router.navigate(['/my-listings']))
       ;
     }
