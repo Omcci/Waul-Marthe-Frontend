@@ -22,8 +22,11 @@ export class ContactPageComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id') ?? ""
-    this.listingsService.getListingById(id).subscribe(listing => this.listing = listing)
-    this.message = `Hi, I'm interested in your ${this.listing?.name?.toLowerCase()} !`
+    this.listingsService.getListingById(id).subscribe(listing => {
+      this.listing = listing
+      this.message = `Hi, I'm interested in your ${this.listing?.name?.toLowerCase()} !`
+    })
+    
   }
 
   sendMessage(): void {
