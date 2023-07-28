@@ -16,7 +16,18 @@ button {
     padding: 16px;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    transition: 400ms ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
+
+button:hover{
+    color: rgb(15, 19, 24);
+    background-color: rgb(133, 171, 237);
+    transform :scale(1.03)
 }
+
+button:active
+  {  box-shadow :0px 4px 8px rgba(darken(dodgerblue, 30%));
+    transform: scale(.90)}
 
 input, textarea {
     border: 2px solid black;
@@ -38,6 +49,13 @@ a {
 h1 {
     font-family: 'Poppins', sans-serif;
     padding: 8px;
+    transition: 400ms ease-in-out;
+    font-size: 46px;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(172, 172, 238);
+}
+
+h1:hover {
+    color: rgb(133, 171, 237)
 }
 
 #page-wrap {
@@ -80,7 +98,7 @@ h1 {
     padding: 16px;
     position: relative;
     margin-bottom: 16px;
-}
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
 
 .buttons-container {
     position: absolute;
