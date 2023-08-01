@@ -9,7 +9,7 @@ import { NewListingPageComponent } from './new-listing-page/new-listing-page.com
 
 const routes: Routes = [
   { path: 'contact/:id', component: ContactPageComponent },
-  { path: 'listings', component: ListingPageComponent, pathMatch: 'full' },
+  { path: 'listings', component: ListingPageComponent},
   { path: 'listings/:id', component: ListingDetailPageComponent },
   { path: 'edit-listing/:id', component: EditListingPageComponent },
   { path: 'my-listings', component: MyListingPageComponent },
