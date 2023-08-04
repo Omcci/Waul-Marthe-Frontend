@@ -1,12 +1,17 @@
 <div id="page-wrap">
-  <app-nav-bar></app-nav-bar>
+  <app-nav-bar>   
+    <div class="signout-container" *ngIf="auth.user | async">
+      <button (click)="signOutClicked()">Sign Out</button>
+    </div>
+</app-nav-bar>
+
   <div id="max-width-column" *ngIf="auth.user | async">
     <div id="content-wrap">
       <router-outlet></router-outlet>
     </div>
-    <div class="signout-container">
-      <button (click)="signOutClicked()">Sign Out</button>
-    </div>
+      <!-- <div class="signout-container">
+        <button (click)="signOutClicked()">Sign Out</button>
+      </div> -->
   </div>
   <div id="max-width-column" *ngIf="!(auth.user | async)">
     <h1>You need to sign in first</h1>

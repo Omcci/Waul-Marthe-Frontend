@@ -48,9 +48,9 @@ a {
 
 h1 {
     font-family: 'Poppins', sans-serif;
-    padding: 8px;
+    /* padding: 8px; */
     transition: 400ms ease-in-out;
-    font-size: 46px;
+    /* font-size: 46px; */
     text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(172, 172, 238);
 }
 
@@ -71,6 +71,7 @@ h1:hover {
     max-width: 80%;
     min-height: 100vh;   
     position: relative;
+    padding-top: 100px;
 }
 
 #top-bar {
@@ -84,13 +85,14 @@ h1:hover {
 }
 
 #app-heading {
-    margin:  24px;
+    /* margin:  24px; */
+    margin: 10px !important;
 }
 
 #my-listings-button {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 7px;
+    right: 7px;
 }
 
 #content-wrap {
@@ -119,7 +121,7 @@ h1:hover {
 
 .back-buttons {
     position: absolute;
-    right: 0px;
+    right: 16px;
     padding: 16px;
 }
 
@@ -128,7 +130,11 @@ h1:hover {
 }
 
 .signout-container {
-    padding: 16px;
+    /* padding: 16px; */
+    position: absolute;
+    top: 7px;
+    right:150px;
+
 }
 
 .input-container {

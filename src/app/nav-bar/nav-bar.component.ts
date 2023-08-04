@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import * as firebase from 'firebase/auth';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
+
+   constructor(
+    public auth : AngularFireAuth,
+  ) {}
+signOutClicked(): void {
+    this.auth.signOut()
+  }
 
 }

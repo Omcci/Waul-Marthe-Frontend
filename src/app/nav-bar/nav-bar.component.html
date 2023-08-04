@@ -2,6 +2,9 @@
   <a [routerLink]="['/listings']">
     <h1 id="app-heading">Waul Marthe</h1>
   </a>
+  <div class="signout-container" *ngIf="auth.user | async">
+    <button (click)="signOutClicked()">Sign Out</button>
+  </div>
   <a [routerLink]="['/my-listings']" >
     <button id="my-listings-button">My listings</button>
   </a>
