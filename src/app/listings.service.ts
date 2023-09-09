@@ -21,10 +21,10 @@ const httpOptionsWithAuthToken = (token: string) => ({
   providedIn: 'root',
 })
 export class ListingsService {
-  constructor(private http: HttpClient, private auth: AngularFireAuth) {}
+  constructor(private http: HttpClient, private auth: AngularFireAuth) { }
 
   getListings(): Observable<Listing[]> {
-    return this.http.get<Listing[]>('/api/listings');
+    return this.http.get<Listing[]>('http://localhost:8010/api/listings');
   }
 
   getListingById(id: string): Observable<Listing> {
@@ -39,6 +39,20 @@ export class ListingsService {
     );
   }
 
+  // TODO: Add a method to get listings for a specific user
+  // with the following requirements:
+  // - The method should return an Observable of Listing[]
+  // - The method should take a uid string as an argument
+  // - The method should make a GET request to /api/users/:uid/listings
+  // - The method should use the httpOptionsWithAuthToken function
+  //   to send the user's token as an Authorization header
+  // - The method should return the response from the HTTP request
+  //  as an Observable of Listing[]
+  // - The method should return an empty array if the user is not logged in
+  // - The method should return an empty array if the user is logged in
+  //  but the user's token is null
+  // - The method should return an empty array if the user is logged in
+  // but the user's token is undefined
   getListingsForUser(): Observable<Listing[]> {
     return new Observable<Listing[]>((observer) => {
       this.auth.user.subscribe((user) => {
